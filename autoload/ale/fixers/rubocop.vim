@@ -9,7 +9,7 @@ function! ale#fixers#rubocop#GetCommand(buffer) abort
     return ale#handlers#ruby#EscapeExecutable(l:executable, 'rubocop')
     \   . (!empty(l:config) ? ' --config ' . ale#Escape(l:config) : '')
     \   . (!empty(l:options) ? ' ' . l:options : '')
-    \   . ' --auto-correct --force-exclusions %t'
+    \   . ' --force-exclusion --auto-correct %t'
 endfunction
 
 function! ale#fixers#rubocop#Fix(buffer) abort
