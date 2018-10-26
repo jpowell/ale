@@ -15,6 +15,6 @@ endfunction
 function! ale#fixers#rubocop#Fix(buffer) abort
     return {
     \   'command': ale#fixers#rubocop#GetCommand(a:buffer),
-    \   'read_temporary_file': 1,
+    \   'read_temporary_file': 0,
     \}
 endfunction
